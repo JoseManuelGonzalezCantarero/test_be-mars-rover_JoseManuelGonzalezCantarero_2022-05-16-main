@@ -1,15 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Rover\Tests\Domain\Rover;
 
 use PHPUnit\Framework\TestCase;
-use Rover\Domain\Coordinates\Coordinates;
-use Rover\Domain\Coordinates\InvalidCoordinatesPositionException;
+use Rover\Domain\Coordinate\Coordinate;
+use Rover\Domain\Coordinate\InvalidCoordinatePositionException;
 use Rover\Domain\Direction\Direction;
 use Rover\Domain\Direction\InvalidDirectionException;
 use Rover\Domain\Rover\RoverStatus;
 
-class RoverStatusTest extends TestCase
+final class RoverStatusTest extends TestCase
 {
     public function setUp(): void
     {
@@ -19,7 +21,7 @@ class RoverStatusTest extends TestCase
     public function testValidRoverStatusInput()
     {
         $this->assertTrue(
-            $this->roverStatus->getPosition() instanceof Coordinates &&
+            $this->roverStatus->getPosition() instanceof Coordinate &&
             $this->roverStatus->getDirection() instanceof Direction
         );
     }
@@ -31,7 +33,7 @@ class RoverStatusTest extends TestCase
 
     public function testInvalidRoverStatusInputPosition()
     {
-        $this->expectException(InvalidCoordinatesPositionException::class);
+        $this->expectException(InvalidCoordinatePositionException::class);
         $this->roverStatus = new RoverStatus('1 -2 P');
     }
 

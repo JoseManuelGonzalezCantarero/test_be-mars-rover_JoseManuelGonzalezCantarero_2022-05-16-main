@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Rover\Tests\Domain;
 
 use PHPUnit\Framework\TestCase;
-use Rover\Domain\Coordinates\Coordinates;
+use Rover\Domain\Coordinate\Coordinate;
 use Rover\Domain\Plateau;
 
 final class PlateauTest extends TestCase
 {
     public function setUp(): void
     {
-        $position = new Coordinates(5, 6);
+        $position = new Coordinate(5, 6);
         $this->plateau = new Plateau($position);
     }
 

@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Rover\Domain\Direction;
 
-class Direction
+final class Direction
 {
     public const NORTH = "N";
     public const WEST = "W";

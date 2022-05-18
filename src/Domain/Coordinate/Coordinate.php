@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Rover\Domain\Coordinates;
+namespace Rover\Domain\Coordinate;
 
-final class Coordinates
+final class Coordinate
 {
     public function __construct(private int $x, private int $y)
     {
         if (-1 >= $x || -1 >= $y) {
-            throw new InvalidCoordinatesPositionException();
+            throw new InvalidCoordinatePositionException();
         }
     }
 

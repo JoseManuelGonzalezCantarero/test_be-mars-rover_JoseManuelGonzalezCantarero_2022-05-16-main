@@ -4,27 +4,27 @@ declare(strict_types=1);
 
 namespace Rover\Domain;
 
-use Rover\Domain\Coordinates\Coordinates;
+use Rover\Domain\Coordinate\Coordinate;
 
 final class Plateau
 {
     private const LOWER_LEFT_COORDINATE = 0;
 
-    private Coordinates $minLeftBorder;
-    private Coordinates $maxRightBorder;
+    private Coordinate $minLeftBorder;
+    private Coordinate $maxRightBorder;
 
-    public function __construct(Coordinates $coordinates)
+    public function __construct(Coordinate $coordinates)
     {
-        $this->minLeftBorder = new Coordinates(self::LOWER_LEFT_COORDINATE, self::LOWER_LEFT_COORDINATE);
+        $this->minLeftBorder = new Coordinate(self::LOWER_LEFT_COORDINATE, self::LOWER_LEFT_COORDINATE);
         $this->maxRightBorder = $coordinates;
     }
 
-    public function getMinLeftBorder(): Coordinates
+    public function getMinLeftBorder(): Coordinate
     {
         return $this->minLeftBorder;
     }
 
-    public function getMaxRightBorder(): Coordinates
+    public function getMaxRightBorder(): Coordinate
     {
         return $this->maxRightBorder;
     }

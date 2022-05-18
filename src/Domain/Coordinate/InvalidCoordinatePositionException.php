@@ -1,10 +1,12 @@
 <?php
 
-namespace Rover\Domain\Coordinates;
+declare(strict_types=1);
+
+namespace Rover\Domain\Coordinate;
 
 use Psr\Log\InvalidArgumentException;
 
-class InvalidCoordinatesPositionException extends InvalidArgumentException
+final class InvalidCoordinatePositionException extends InvalidArgumentException
 {
     public function __construct()
     {

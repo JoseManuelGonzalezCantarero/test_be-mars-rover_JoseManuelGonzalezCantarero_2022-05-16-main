@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Rover\Tests\Domain\Coordinates;
+namespace Rover\Tests\Domain\Coordinate;
 
 use PHPUnit\Framework\TestCase;
-use Rover\Domain\Coordinates\Coordinates;
-use Rover\Domain\Coordinates\InvalidCoordinatesPositionException;
+use Rover\Domain\Coordinate\Coordinate;
+use Rover\Domain\Coordinate\InvalidCoordinatePositionException;
 
-final class CoordinatesTest extends TestCase
+final class CoordinateTest extends TestCase
 {
     public function setUp(): void
     {
-        $this->position = new Coordinates(1, 2);
+        $this->position = new Coordinate(1, 2);
     }
 
     public function testCanHandleInputReturningIntegerToXPosition()
@@ -27,7 +27,7 @@ final class CoordinatesTest extends TestCase
 
     public function testInvalidPositionPoints()
     {
-        $this->expectException(InvalidCoordinatesPositionException::class);
-        new Coordinates(-1, 2);
+        $this->expectException(InvalidCoordinatePositionException::class);
+        new Coordinate(-1, 2);
     }
 }

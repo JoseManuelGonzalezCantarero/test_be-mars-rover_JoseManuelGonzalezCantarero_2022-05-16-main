@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Rover\Tests\Domain;
+namespace Rover\Tests\Domain\Plateau;
 
 use PHPUnit\Framework\TestCase;
 use Rover\Domain\Coordinate\Coordinate;
-use Rover\Domain\Plateau;
+use Rover\Domain\Plateau\Plateau;
 
 final class PlateauTest extends TestCase
 {

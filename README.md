@@ -54,4 +54,32 @@ Happy hacking & good luck! 🚀
 ---
 
 ## Candidate's documentation
-_Please provide your documentation and outline your choices here._
+
+### Instructions
+If you want to try the app, follow this steps:
+- Ensure you have PHP 8.0
+- Launch composer install
+
+After that, if you want to run the tests, run:
+- composer test tests
+
+To launch the app, run:
+- php index.php < input.txt
+
+Feel free to edit the input.txt to see other outputs!!
+
+### Description
+What I build here ( or try to build ) it's a Domain Driven Design architecture or at least, a clean architecture, 
+separating the code in different layers ( Domain and Application ) and favouring composition over inheritance.
+
+### Reasons behind my technical choices
+At first, I thought to build a console command with Symfony or even a REST API, but then I decide to keep it simple
+(KISS design principle) and make a plain php script with a txt file as the input data.
+
+### Additional features
+With more time for the project: 
+- Maybe I would have used Value Objects instead of scalar types, to validate the arguments.
+- It could be interesting to add a database to have a history of the rovers and their movements.
+- A logger to log when things go wrong.
+- A front page to introduce the data and send the request through an API.
+- Docker to avoid problems when you want to try the app

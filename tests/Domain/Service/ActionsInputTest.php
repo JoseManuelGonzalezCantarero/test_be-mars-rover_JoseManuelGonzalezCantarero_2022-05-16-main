@@ -12,7 +12,7 @@ final class ActionsInputTest extends TestCase
 {
     public function testValidInputToActions()
     {
-        $actions = new ActionsInput("M M L M M R");
+        $actions = new ActionsInput('M M L M M R');
         $this->assertTrue($actions->getActions() instanceof Actions);
     }
 }

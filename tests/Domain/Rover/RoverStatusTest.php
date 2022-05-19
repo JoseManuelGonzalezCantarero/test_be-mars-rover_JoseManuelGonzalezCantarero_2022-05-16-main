@@ -34,7 +34,7 @@ final class RoverStatusTest extends TestCase
     public function testInvalidRoverStatusInputPosition()
     {
         $this->expectException(InvalidCoordinatePositionException::class);
-        $this->roverStatus = new RoverStatus('1 -2 P');
+        $this->roverStatus = new RoverStatus('1 -2 N');
     }
 
     public function testInvalidRoverStatusInputDirection()

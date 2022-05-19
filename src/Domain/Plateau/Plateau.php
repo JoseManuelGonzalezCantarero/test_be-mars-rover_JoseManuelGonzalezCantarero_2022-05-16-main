@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rover\Domain;
+namespace Rover\Domain\Plateau;
 
 use Rover\Domain\Coordinate\Coordinate;
 

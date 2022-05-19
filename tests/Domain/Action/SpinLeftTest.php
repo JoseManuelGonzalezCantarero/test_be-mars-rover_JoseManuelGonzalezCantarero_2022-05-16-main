@@ -14,11 +14,11 @@ final class SpinLeftTest extends TestCase
     public function testRoverCanTurnLeft()
     {
         $rover = new Rover();
-        $rover->setRoverStatus(new RoverStatus("3 4 W"));
+        $rover->setRoverStatus(new RoverStatus('3 4 W'));
 
-        $spinLeft = (new ActionFactory())->createAction("L");
+        $spinLeft = (new ActionFactory())->createAction('L');
         $spinLeft->execute($rover);
 
-        $this->assertSame("S", $rover->getRoverStatus()->getDirection()->getHeadingDirection());
+        $this->assertSame('S', $rover->getRoverStatus()->getDirection()->getHeadingDirection());
     }
 }

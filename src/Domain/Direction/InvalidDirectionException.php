@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Rover\Domain\Direction;
 
 use Psr\Log\InvalidArgumentException;
 
-class InvalidDirectionException extends InvalidArgumentException
+final class InvalidDirectionException extends InvalidArgumentException
 {
     public function __construct(private string $headingDirection = "")
     {

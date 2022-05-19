@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Rover\Tests\Domain\Direction;
 
 use PHPUnit\Framework\TestCase;
@@ -17,6 +19,6 @@ final class DirectionTest extends TestCase
     public function testInvalidExceptionWhenWrongHeadDirection()
     {
         $this->expectException(InvalidDirectionException::class);
-        new Direction("NW");
+        new Direction('NW');
     }
 }

@@ -15,6 +15,7 @@ final class InvalidActionException extends InvalidArgumentException
 
     public function errorMessage(): string
     {
+        echo $this->action;
         return sprintf('Emmm, I\'m not a Boston Dynamic robot, so I don\'t know what <%s> means', $this->action);
     }
 }

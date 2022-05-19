@@ -18,7 +18,7 @@ final class SpinRight implements ActionInterface
         $headingDirection = $roverStatus->getDirection()->getHeadingDirection();
         $newHeadingDirection = $this->spin($headingDirection);
 
-        $newRoverStatus = $xPosition . " " . ($yPosition + 1) . " " . $newHeadingDirection;
+        $newRoverStatus = $xPosition . " " . $yPosition . " " . $newHeadingDirection;
         $rover->setRoverStatus(new RoverStatus($newRoverStatus));
     }
 

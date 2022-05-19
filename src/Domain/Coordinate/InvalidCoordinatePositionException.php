@@ -8,13 +8,13 @@ use Psr\Log\InvalidArgumentException;
 
 final class InvalidCoordinatePositionException extends InvalidArgumentException
 {
-    public function __construct()
+    public function __construct(private int $position)
     {
         parent::__construct();
     }
 
     public function errorMessage(): string
     {
-        return 'Eeeeyyy, this point position is not valid! Give some positive numbers please!';
+        return sprintf('Eeeeyyy, <%s> as point position is not valid! Give some positive numbers please!', $this->position);
     }
 }

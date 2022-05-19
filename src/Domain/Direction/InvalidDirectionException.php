@@ -13,6 +13,6 @@ class InvalidDirectionException extends InvalidArgumentException
 
     public function errorMessage(): string
     {
-        return sprintf('Meeeeeh, this <%s> direction is not valid!', $this->headingDirection);
+        return sprintf('Meeeeeh, this <%s> cardinal point is not valid!', $this->headingDirection);
     }
 }

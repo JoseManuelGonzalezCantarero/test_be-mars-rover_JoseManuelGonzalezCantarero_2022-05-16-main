@@ -8,8 +8,12 @@ final class Coordinate
 {
     public function __construct(private int $x, private int $y)
     {
-        if (-1 >= $x || -1 >= $y) {
-            throw new InvalidCoordinatePositionException();
+        if (-1 >= $x) {
+            throw new InvalidCoordinatePositionException($x);
+        }
+
+        if (-1 >= $y) {
+            throw new InvalidCoordinatePositionException($y);
         }
     }
 
